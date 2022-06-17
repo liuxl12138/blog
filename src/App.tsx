@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
+import { Suspense } from "react";
+import RouterList from "./router/index";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Suspense>
+      <BrowserRouter>
+        <RouterList></RouterList>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 
