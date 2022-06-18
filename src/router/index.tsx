@@ -3,11 +3,11 @@ import routes, { BaseRouter } from "./config";
 
 export default function RouterList() {
   const createRouteArr = (routes: BaseRouter[]) => {
-    let routeArr: RouteObject[] = [];
+    let routeArr: Array<RouteObject> = [];
     routes.forEach((route) => {
       routeArr.push({
         path: route.path,
-        element: <route.component />,
+        element: route.element && <route.element />,
         children: route.children && createRouteArr(route.children),
       });
     });

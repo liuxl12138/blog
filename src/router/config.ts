@@ -2,7 +2,7 @@ import React from "react";
 
 export interface BaseRouter {
   path: string;
-  component?: any;
+  element?: any;
   children?: BaseRouter[];
   meta: {
     title: string;
@@ -11,10 +11,19 @@ export interface BaseRouter {
 const routes: BaseRouter[] = [
   {
     path: "/",
-    component: React.lazy(() => import("../views/index")),
     meta: {
       title: "飞龙的博客",
     },
+    element: React.lazy(() => import("../views/index")),
+    children: [
+      {
+        path: "index",
+        element: React.lazy(() => import("../views/index")),
+        meta: {
+          title: "飞龙的博客",
+        },
+      },
+    ],
   },
 ];
 
