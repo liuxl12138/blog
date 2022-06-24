@@ -14,11 +14,11 @@ const routes: BaseRouter[] = [
     meta: {
       title: "飞龙的博客",
     },
-    element: React.lazy(() => import("../views/index")),
+    element: React.lazy(() => import("../views/index/index")),
     children: [
       {
         path: "index",
-        element: React.lazy(() => import("../views/index")),
+        element: React.lazy(() => import("../views/index/index")),
         meta: {
           title: "飞龙的博客",
         },

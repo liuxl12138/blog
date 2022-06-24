@@ -1,0 +1,22 @@
+.tab-container {
+  width: 100%;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  color: #515767;
+
+  .tab-box {
+    width: 680px;
+    margin: auto;
+    .tab-item {
+      cursor: pointer;
+      margin-right: 40px;
+      &.active {
+        color: #138a64;
+      }
+      &:hover {
+        color: #138a64;
+      }
+    }
+  }
+}

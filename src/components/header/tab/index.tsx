@@ -1,6 +1,6 @@
 import { tabType } from "@/types/base";
 import { useState } from "react";
-import "./Tab.scss";
+import "./index.scss";
 
 const Tab = () => {
   const [tabList] = useState<tabType[]>([
@@ -16,19 +16,21 @@ const Tab = () => {
   return (
     <>
       <div className="tab-container">
-        {tabList.map((item) => (
-          <span
-            key={item.id}
-            className={`tab-item ${
-              activeTabId === item.id ? "active" : undefined
-            }`}
-            onClick={() => {
-              setActiveTabId(item.id);
-            }}
-          >
-            {item.name}
-          </span>
-        ))}
+        <div className="tab-box">
+          {tabList.map((item) => (
+            <span
+              key={item.id}
+              className={`tab-item ${
+                activeTabId === item.id ? "active" : undefined
+              }`}
+              onClick={() => {
+                setActiveTabId(item.id);
+              }}
+            >
+              {item.name}
+            </span>
+          ))}
+        </div>
       </div>
     </>
   );

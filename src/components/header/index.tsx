@@ -1,6 +1,7 @@
 import { navList } from "@/config";
 import { useState } from "react";
-import "./Header.scss";
+import "./index.scss";
+import Tab from "./tab";
 
 const Header = () => {
   const [activeNavIndex, setActiveNavIndex] = useState<number>(0);
@@ -20,6 +21,7 @@ const Header = () => {
           </li>
         ))}
       </ul>
+      <Tab></Tab>
     </>
   );
 };
